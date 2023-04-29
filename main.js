@@ -10,7 +10,7 @@ const errorMessage = document.getElementById('modal-message');
 heartGlyphs.forEach(heartGlyph => {
   heartGlyph.addEventListener('click', () => {
     mimicServerCall()
-      .then(response => {
+      .then(() => {
         if (heartGlyph.innerText === EMPTY_HEART) {
           heartGlyph.innerText = FULL_HEART;
           heartGlyph.classList.add('activated-heart');
